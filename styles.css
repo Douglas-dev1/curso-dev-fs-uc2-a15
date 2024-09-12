@@ -33,13 +33,15 @@ body {
     height: auto;
     max-width: 1000px;
     background-color: coral;
-    margin: 0 auto;      /*Define a margem*/
+    margin: 0 auto;
+    /*Define a margem*/
     /*display: flex;                /*permite que eu possa manipular os elementos, como mover e alinhar*/
     color: bisque;
 }
 
 #menu {
-    padding-top: 20px;/*padding-xxx empurra os elementos da caixa para os lados/cima e baixo*/
+    padding-top: 20px;
+    /*padding-xxx empurra os elementos da caixa para os lados/cima e baixo*/
     width: 100%;
     height: 70px;
     background-color: #892828;
@@ -97,14 +99,37 @@ body {
     margin-bottom: 3px;
 }
 
+#receita {
+    
+    display: grid;
+    grid-template-columns: 43% 55%;
+    gap: 2%;
+}
+
 #conteudo {
     width: 100%;
     height: auto;
     background-color: #892828;
-    border-radius: 8px;/*CHANFROS DA CAIXA*/
-    border: 2px solid #fefefe;/*ESPESSURA E COR DA BORDA*/
+    border-radius: 8px;
+    /*CHANFROS DA CAIXA*/
+    border: 2px solid #fefefe;
+    /*ESPESSURA E COR DA BORDA*/
     margin-bottom: 3px;
-    padding: 10px; /*Tabulação do texto*/
+    padding: 10px;
+    /*Tabulação do texto*/
+}
+
+#preparo {
+    width: 100%;
+    height: auto;
+    background-color: #892828;
+    border-radius: 8px;
+    /*CHANFROS DA CAIXA*/
+    border: 2px solid #fefefe;
+    /*ESPESSURA E COR DA BORDA*/
+    margin-bottom: 3px;
+    padding: 10px;
+    /*Tabulação do texto*/
 }
 
 #conteudo h2 {
