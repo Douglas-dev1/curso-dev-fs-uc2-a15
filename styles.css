@@ -33,25 +33,20 @@ body {
     height: auto;
     max-width: 1000px;
     background-color: coral;
-    margin: 0 auto;
-    /*Define a margem*/
+    margin: 0 auto;      /*Define a margem*/
     /*display: flex;                /*permite que eu possa manipular os elementos, como mover e alinhar*/
     color: bisque;
 }
 
-
-
 #menu {
-    padding-top: 20px;
-    /*padding-xxx empurra os elementos da caixa para os lados/cima e baixo*/
+    padding-top: 20px;/*padding-xxx empurra os elementos da caixa para os lados/cima e baixo*/
     width: 100%;
     height: 70px;
     background-color: #892828;
-    ;
     border: 2px solid #fefefe;
     border-radius: 10px;
-    margin-bottom: 1.5px;
-    margin-top: 1.5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 #menu ul li a {
@@ -78,16 +73,19 @@ body {
 #titulo {
     width: 100%;
     height: auto;
-    background-color: brown;
+    background-color: #892828;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
     border: 2px solid #fefefe;
     /*ESPESSURA E COR DA BORDA*/
-    padding: 0 60;
-    padding-top: 30px;
-    margin-bottom: 5px;
+    padding: 20px;
+    margin-bottom: 3px;
+}
+
+#titulo h1 {
+    text-align: center;
 }
 
 #titulo img {
@@ -95,19 +93,18 @@ body {
     height: auto;
     border-radius: 8px;
     /*CHANFROS DA CAIXA*/
-    margin-bottom: 20px;
     border: 2px solid #000;
+    margin-bottom: 3px;
 }
 
 #conteudo {
     width: 100%;
     height: auto;
-    background-color: brown;
-    border-radius: 8px;
-    /*CHANFROS DA CAIXA*/
-    border: 2px solid #fefefe;
-    /*ESPESSURA E COR DA BORDA*/
-    margin-bottom: 5px;
+    background-color: #892828;
+    border-radius: 8px;/*CHANFROS DA CAIXA*/
+    border: 2px solid #fefefe;/*ESPESSURA E COR DA BORDA*/
+    margin-bottom: 3px;
+    padding: 10px; /*Tabulação do texto*/
 }
 
 #conteudo h2 {
