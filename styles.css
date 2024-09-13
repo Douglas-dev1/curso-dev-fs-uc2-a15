@@ -31,12 +31,13 @@ body {
     /*Define o tamanho maximo de pixels*/
     height: auto;
     margin: 0 auto;
-    background: rgb(171,34,4);
-background: linear-gradient(351deg, rgba(171,34,4,1) 33%, rgba(226,126,55,1) 100%, rgba(251,208,179,1) 100%);
+    background: rgb(171, 34, 4);
+    background: linear-gradient(351deg, rgba(171, 34, 4, 1) 33%, rgba(226, 126, 55, 1) 100%, rgba(251, 208, 179, 1) 100%);
     /*Define a margem*/
     /*display: flex;                /*permite que eu possa manipular os elementos, como mover e alinhar*/
     color: bisque;
 }
+
 
 #menu {
     padding-top: 20px;
@@ -58,7 +59,8 @@ background: linear-gradient(351deg, rgba(171,34,4,1) 33%, rgba(226,126,55,1) 100
 
 #menu ul li {
     list-style: none;
-} 
+}
+
 #menu ul li a {
     text-decoration: none;
     color: bisque;
@@ -81,8 +83,7 @@ background: linear-gradient(351deg, rgba(171,34,4,1) 33%, rgba(226,126,55,1) 100
     border-radius: 8px;
     border: 2px solid #fefefe;
     /*ESPESSURA E COR DA BORDA*/
-    padding: 10px;
-    margin-bottom: 3px;
+    justify-items: center;
 }
 
 #titulo img {
@@ -93,6 +94,7 @@ background: linear-gradient(351deg, rgba(171,34,4,1) 33%, rgba(226,126,55,1) 100
     border: 2px solid #000;
     margin-bottom: 3px;
 }
+
 #titulo h1 {
     text-align: center;
 }
@@ -107,18 +109,73 @@ background: linear-gradient(351deg, rgba(171,34,4,1) 33%, rgba(226,126,55,1) 100
     display: grid;
     grid-template-columns: 30% 60%;
     gap: 10%;
+    border-radius: 8px;
+    border: 2px solid #fefefe;
 }
 
-#conteudo, #preparo {
+#conteudo,
+#preparo {
     display: flex;
     flex-direction: column;
     gap: 15px;
-  }
-
-#conteudo h2 {
-    text-align: left;
 }
 
 MargemTitulos {
     margin: 15px 0;
+}
+
+#conteudo ul li {
+    list-style-position: inside;
+}
+
+#preparo ol li {
+    list-style-position: inside;
+}
+
+/* Alinhar os números da lista numerada de mode de preparo */
+#modo-preparo ol li {
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    &::marker {
+        font-weight: 800;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        width: 100vw;
+        max-width: 100vw;
+    }
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+#menu {
+    height: 50px;
+}
+
+#menu ul {
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+#menu ul li a {
+    font-size: 15px;
+}
+
+#receita {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
 }
