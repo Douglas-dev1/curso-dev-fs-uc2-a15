@@ -1,15 +1,19 @@
-/* RESET global */
+/* RESET global: Remove o comportamento padrão dos elementos */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+    /* Faz com que padding e border sejam incluídos no tamanho total dos elementos */
 }
 
 * {
     margin: 0;
+    /* Remove margens padrão */
     padding: 0;
+    /* Remove preenchimentos padrão */
 }
 
+/* Remover as margens verticais de certos elementos */
 body,
 h1,
 h2,
@@ -21,161 +25,278 @@ blockquote,
 dl,
 dd {
     margin-block-end: 0;
+    /* Remove o espaço após esses elementos */
 }
 
 body {
     font-family: 'Albert Sans', Arial, Helvetica, sans-serif;
-    /*Com a medida vw o site se adapta ao tamanho da tela(view width)*/
-    width: 65vw;
-    max-width: 65vwpx;
-    /*Define o tamanho maximo de pixels*/
+    /* Define a fonte do site */
+    width: 70vw;
+    /* A largura será 70% da largura da tela */
+    max-width: 70vwpx;
+    /* Limita a largura máxima a 70vw, mas o "px" aqui é um erro, deveria ser só "vw" */
     height: auto;
+    /* Define a altura automática */
     margin: 0 auto;
-    background: rgb(171, 34, 4);
+    /* Centraliza o conteúdo horizontalmente */
     background: linear-gradient(351deg, rgba(171, 34, 4, 1) 33%, rgba(226, 126, 55, 1) 100%, rgba(251, 208, 179, 1) 100%);
-    /*Define a margem*/
-    /*display: flex;                /*permite que eu possa manipular os elementos, como mover e alinhar*/
+    /* Gradiente de fundo */
     color: bisque;
+    /* Cor do texto */
 }
 
+#container {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background-color: #892828;
+    /* Cor de fundo do container */
+}
 
+#banner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(249, 67, 1, 0.936);
+    /* Cor de fundo do banner */
+}
+
+#banner img {
+    width: 70%;
+    height: 90%;
+    /* Dimensões da imagem no banner */
+}
+
+#banner ul {
+    display: flex;
+    /* Exibe os itens da lista em linha */
+}
+
+#banner ul li {
+    list-style: none;
+    /* Remove os marcadores da lista */
+    font-size: 50px;
+    /* Tamanho da fonte dos itens da lista */
+}
+
+#banner figure {
+    width: 70%;
+    height: 90%;
+    padding: 15px;
+    /* Dimensões e preenchimento da figura no banner */
+}
+
+#banner figure img {
+    width: 100%;
+    height: auto;
+    /* Dimensões da imagem dentro da figura */
+}
+
+#banner figure figcaption {
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #892828;
+}
+
+.banner-selecionado {
+    color: rgb(135, 98, 72);
+    /* Cor do texto do banner selecionado */
+}
+
+/* Estiliza o menu de navegação */
 #menu {
     padding-top: 20px;
-    /*padding-xxx empurra os elementos da caixa para os lados/cima e baixo*/
+    /* Espaçamento superior */
     width: 100%;
+    /* O menu ocupará toda a largura */
     height: 70px;
+    /* Altura do menu */
     background: rgb(153, 49, 55);
+    /* Cor de fundo sólida */
     background: linear-gradient(90deg, rgba(153, 49, 55, 1) 0%, rgba(217, 6, 55, 1) 67%, rgba(205, 87, 3, 1) 100%);
-    border: 2px solid #fefefe;
-    border-radius: 10px;
+    /* Gradiente de fundo */
     margin-top: 3px;
+    /* Margem superior */
     margin-bottom: 3px;
+    /* Margem inferior */
 }
 
+/* Estiliza a lista dentro do menu */
 #menu ul {
+    width: 100%;
     display: flex;
+    /* Faz os itens da lista ficarem em linha */
     justify-content: space-around;
+    /* Distribui os itens igualmente */
 }
 
 #menu ul li {
     list-style: none;
+    /* Remove as bolinhas ou números da lista */
 }
 
+/* Estiliza os links do menu */
 #menu ul li a {
     text-decoration: none;
+    /* Remove o sublinhado dos links */
     color: bisque;
+    /* Cor do texto dos links */
     font-size: 32px;
+    /* Tamanho da fonte */
     font-weight: 700;
+    /* Peso da fonte (negrito) */
 
     &:hover {
         color: coral;
+        /* Cor ao passar o mouse */
         text-decoration: underline;
+        /* Sublinhado ao passar o mouse */
     }
 }
 
+/* Estiliza a seção do título */
 #titulo {
     width: 100%;
+    /* O título ocupará toda a largura */
     height: auto;
+    /* Altura automática */
     background-color: #892828;
+    /* Cor de fundo */
     display: flex;
+    /* Flexbox para alinhar os elementos */
     flex-direction: column;
+    /* Elementos alinhados em coluna */
     align-items: center;
-    border-radius: 8px;
-    border: 2px solid #fefefe;
-    /*ESPESSURA E COR DA BORDA*/
+    /* Centraliza os elementos horizontalmente */
     justify-items: center;
 }
 
-#titulo img {
-    width: 70%;
-    height: auto;
-    border-radius: 8px;
-    /*CHANFROS DA CAIXA*/
-    border: 2px solid #000;
-    margin-bottom: 3px;
-}
-
+/* Centraliza o texto do título */
 #titulo h1 {
     text-align: center;
+    /* Centraliza o texto horizontalmente */
 }
 
+/* Estiliza a imagem dentro do título */
+#titulo img {
+    width: 70%;
+    /* Largura da imagem */
+    height: auto;
+    /* Altura automática */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    border: 2px solid #000;
+    /* Borda preta */
+    margin-bottom: 3px;
+    /* Margem inferior */
+}
+
+/* Estiliza a seção de receitas */
 #receita {
     width: 100%;
+    /* Largura total */
     height: auto;
+    /* Altura automática */
     background-color: #892828;
+    /* Cor de fundo */
     padding: 0 60px;
+    /* Preenchimento lateral de 60px */
     padding-top: 50px;
+    /* Preenchimento superior */
     padding-bottom: 30px;
+    /* Preenchimento inferior */
     display: grid;
+    /* Layout em grid */
     grid-template-columns: 30% 60%;
+    /* Define 2 colunas com larguras de 30% e 60% */
     gap: 10%;
-    border-radius: 8px;
-    border: 2px solid #fefefe;
+    /* Espaçamento entre as colunas */
 }
 
+/* Estiliza os conteúdos e o preparo */
 #conteudo,
 #preparo {
+    width: 100%;
     display: flex;
+    /* Flexbox para organizar em coluna */
     flex-direction: column;
+    /* Alinhar itens em coluna */
     gap: 15px;
+    /* Espaçamento entre os itens */
 }
 
 MargemTitulos {
     margin: 15px 0;
+    /* Margem vertical de 15px */
 }
 
 #conteudo ul li {
     list-style-position: inside;
+    /* Define a posição dos marcadores das listas dentro do conteúdo */
 }
 
-#preparo ol li {
+#conteudo ol li {
     list-style-position: inside;
-}
-
-/* Alinhar os números da lista numerada de mode de preparo */
-#modo-preparo ol li {
-    list-style-type: decimal;
-    list-style-position: inside;
+    /* Marcador dentro da área de texto */
     margin-bottom: 10px;
+    /* Espaçamento inferior dos itens da lista */
 
     &:last-child {
         margin: 0;
+        /* Remove a margem do último item */
     }
 
     &::marker {
         font-weight: 800;
+        /* Peso da fonte dos marcadores */
     }
 }
 
+/* Estilos para telas menores (tablet) */
+@media (max-width: 1024px) {
+    body {
+        width: 80vw;
+        max-width: 80vw;
+    }
+
+    #receita {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 15px 30px;
+    }
+}
+
+/* Estilos para telas menores (mobile) */
 @media (max-width: 600px) {
     body {
         width: 100vw;
         max-width: 100vw;
     }
-}
 
-h1 {
-    font-size: 20px;
-    text-align: center;
-}
+    #menu {
+        height: 50px;
+    }
 
-#menu {
-    height: 50px;
-}
+    #menu ul {
+        justify-content: space-evenly;
+    }
 
-#menu ul {
-    width: 100%;
-    height: 100%;
-    justify-content: space-evenly;
-}
+    #menu ul li a {
+        font-size: 18px;
+    }
 
-#menu ul li a {
-    font-size: 15px;
-}
+    #titulo h1 {
+        font-size: 25px;
+    }
 
-#receita {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0 30px;
+    #conteudo {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 15px 30px;
+    }
 }
