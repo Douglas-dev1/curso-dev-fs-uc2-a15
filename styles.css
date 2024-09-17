@@ -84,6 +84,9 @@ body {
     width: 70%;
     height: 90%;
     padding: 15px;
+    /*tira o gap da imagem*/
+    display: flex;
+    flex-direction: column;
     /* Dimensões e preenchimento da figura no banner */
 }
 
@@ -96,7 +99,10 @@ body {
 #banner figure figcaption {
     text-align: center;
     text-transform: uppercase;
+    font-weight: 800;
     background-color: #892828;
+    color: bisque;
+    padding: 5px;
 }
 
 .banner-selecionado {
